@@ -1,0 +1,13 @@
+{
+  "name": "dsh-git-branch-indicator-tests",
+  "private": true,
+  "type": "module",
+  "description": "冒烟测试环境：先 npm install，再跑两个测试脚本。",
+  "scripts": {
+    "test": "node test-host.mjs && node test-client.mjs"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-test-renderer": "18.3.1"
+  }
+}

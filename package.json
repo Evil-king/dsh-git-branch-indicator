@@ -1,0 +1,49 @@
+{
+  "name": "dsh-git-branch-indicator",
+  "version": "1.0.0",
+  "description": "在 DeepSeek Harness (DSH) 聊天输入区显示当前会话目录的 git 分支 · Show the current git branch beside the DSH chat input",
+  "type": "module",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evil-king/dsh-git-branch-indicator.git"
+  },
+  "homepage": "https://github.com/Evil-king/dsh-git-branch-indicator#readme",
+  "bugs": "https://github.com/Evil-king/dsh-git-branch-indicator/issues",
+  "keywords": [
+    "deepseek",
+    "dsh",
+    "dsh-plugin",
+    "git",
+    "branch",
+    "cordis",
+    "deepseek-harness"
+  ],
+  "author": "Erebos (Evil-king)",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-session-controller",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# dsh-git-branch-indicator bundle patch.
+# 插入一个宿主条目：宿主半（lib/index.js）注册只读的
+# /api/git-branch/summary 路由；浏览器半（lib/client.js）把
+# 分支徽章注册进 conversation.input.left 插槽（输入区工具行）。
+- insert:
+    - id: git-branch-indicator
+      name: dsh-git-branch-indicator
